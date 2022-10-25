@@ -6,38 +6,104 @@ h1
 }
 
 
-h2
+h2, h3, h4
 {
     font-family: Roboto Slab;
     font-size: 2rem;
 }
 
-
+ul{
+    font-size: 1.5rem;
+}
+p{
+    font-size: 1.5rem ;
+}
 body{
-    background-image: url("../img/background\(1\).jpg");
-    background-size: 100%;
+    background-color: darkgoldenrod;
 }
-
-
-header section:hover
-{
-    color: blue;
-}
-
 
 header section
 {
-    padding: .5rem;
-    border: 1rem black solid;
+    background-image: url("../img/background.jpg");
+    background-size: 100%;
+    padding-right: 4rem;
+    border: 5px black solid;
     background-color: black;
-    opacity: 75%;
     border-radius: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 2rem;
+}
+
+#Portfolio{ 
+    color: white;
+    padding-left: 2rem;
+    border-radius: 2rem;
+    border: 5px black solid;
+    background-color:black;
+    opacity: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    text-align: center;
+}
+
+#logos{
+    display: flex;
+    align-self: flex-end;
+    justify-self: space-between;
+}
+
+#testimonials{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+figure{
+    margin-bottom: 2rem;
     display: grid;
-    grid-template-columns: 10fr 1fr;
-    text-underline-offset: .25rem;
+    grid-template-columns: 1fr 1fr;
+    font-size: 2rem;
+}
+
+figure img{
+    border-radius: 0rem 2rem 2rem 0rem;
+}
+
+figcaption{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    color: white;
+    border: black 5px solid;
+    border-radius: 2rem 0rem 0rem 2rem;
+    background-color: black;
+    opacity: 80%;
+    height: 450px;
+    padding: 0 50px 0px 50px;
+}
+
+.name{
+    text-indent: 2rem;
 }
 
 
+figure:nth-child(odd) img{
+    justify-self: flex-end;
+    border-radius: 2rem 0rem 0rem 2rem;
+}
+
+figure:nth-child(odd) figcaption{
+    border-radius: 0rem 2rem 2rem 0rem;
+    order: 1;
+}
+
+a:hover
+{
+    color: purple;
+}
 
 a:visited
 {
