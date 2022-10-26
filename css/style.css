@@ -6,14 +6,21 @@ h1
 }
 
 
-h2, h3, h4
+h2
 {
     font-family: Roboto Slab;
     font-size: 2rem;
+    text-underline-position: below;
+    text-underline-offset: .5rem;
+    text-decoration-line: underline;
+    text-decoration-thickness: .25rem;
 }
 
 ul{
     font-size: 1.5rem;
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0;
 }
 p{
     font-size: 1.5rem ;
@@ -25,6 +32,7 @@ body{
 header section
 {
     background-image: url("../img/background.jpg");
+    background-position: center;
     background-size: 100%;
     padding-right: 4rem;
     border: 5px black solid;
@@ -35,23 +43,40 @@ header section
     margin-bottom: 2rem;
 }
 
-#Portfolio{ 
+#Portfolio{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#Talent{
     color: white;
-    padding-left: 2rem;
+    border-radius: 2rem;
+    border: 5px black solid;
+    background-color:black;
+    opacity: 80%;
+    text-align: center;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#Websites{ 
+    color: white;
     border-radius: 2rem;
     border: 5px black solid;
     background-color:black;
     opacity: 80%;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     align-content: center;
     text-align: center;
+    margin: 1rem;
 }
 
-#logos{
-    display: flex;
-    align-self: flex-end;
-    justify-self: space-between;
+#Logos{
+    padding: 0px 20px 20px 0px;
 }
 
 #testimonials{
@@ -69,7 +94,7 @@ figure{
 }
 
 figure img{
-    border-radius: 0rem 2rem 2rem 0rem;
+    border-radius: 0 2rem 2rem 0;
 }
 
 figcaption{
@@ -85,11 +110,6 @@ figcaption{
     padding: 0 50px 0px 50px;
 }
 
-.name{
-    text-indent: 2rem;
-}
-
-
 figure:nth-child(odd) img{
     justify-self: flex-end;
     border-radius: 2rem 0rem 0rem 2rem;
@@ -100,16 +120,56 @@ figure:nth-child(odd) figcaption{
     order: 1;
 }
 
-a:hover
-{
-    color: purple;
-}
-
 a:visited
 {
     color: white;
 }
-/*
-@media screen (max-width:) {
+
+footer{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+
+/*Tablet size screen*/
+
+@media screen and (max-width: 63.56em){
+
     
-}*/
+    #testimonials{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    figure{
+        display: flex;
+        flex-flow: column wrap;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        width: 460px;
+        justify-content: center;
+        border-radius: none;
+    }
+
+    figcaption{
+        border-radius: 2rem 2rem 0 0;
+    }
+    
+    figure img{
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    figure:nth-child(odd) img{
+        border-radius: 2rem 2rem 0rem 0rem;
+    }
+
+    figure:nth-child(odd) figcaption{
+        border-radius: 0rem 0rem 2rem 2rem;
+    }
+
+}
